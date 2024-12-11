@@ -30,19 +30,22 @@ const clients = [
     { name: 'Diana', age: 45, purchases: 1, country: 'Canada' },
     { name: 'Eve', age: 20, purchases: 0, country: 'USA' }
 ];
+console.log('clients', clients);
 
-const adults = clients.filter(/* Votre code ici */);
-console.log(adults);
+const adults = clients.filter(el => el.age >= 18);
+console.log('adults', adults);
 
-const report = adults.map(/* Votre code ici */);
-console.log(report);
+const report = clients.map(el => `${el.name} a effectué ${el.purchases} achats.`);
+console.log('report', report);
 
-const totalPurchases = adults.reduce(/* Votre code ici */);
+const totalPurchases = clients.reduce((sum, cli) => sum + cli.purchases, 0);
 console.log(`Total des achats : ${totalPurchases}`);
 
 // BONUs
 const bonus = {
-    France: [ /* Clients en France */],
-    USA: [ /* Clients aux USA */],
-    Canada: [ /* Clients au Canada */]
+    France: clients.filter(cli => cli.country == 'France').map(el => el.name),
+    USA: clients.filter(cli => cli.country == 'USA').map(el => el.name),
+    Canada: clients.filter(cli => cli.country == 'Canada').map(el => el.name)
 }
+console.log('bonus', bonus);
+
