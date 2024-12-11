@@ -20,9 +20,18 @@ const surname = "Bob";
 console.log(`Bonjour, ${surname}!`); // Bonjour, Bob!
 
 // Code à moderniser
-var person = { name: "John", age: 25 };
-var fruits = ["Apple", "Orange", "Banana"];
-console.log("Name: " + person.name + ", Age: " + person.age);
-for (var i = 0; i < fruits.length; i++) {
-  console.log(fruits[i]);
+// var person = { name: "John", age: 25 };
+// var fruits = ["Apple", "Orange", "Banana"];
+// console.log("Name: " + person.name + ", Age: " + person.age);
+// for (var i = 0; i < fruits.length; i++) {
+//   console.log(fruits[i]);
+// }
+
+// Code modernisé en ES2015
+const person = { name: "John", age: 25 };
+const fruits = ["Apple", "Orange", "Banana"];
+console.log(`Name: ${person.name}, Age: ${person.age}`);
+for (const fruit of fruits) {
+  console.log(fruit);
 }
+
