@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA Exemple avec Service Worker et Fetch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Application PWA - Gestion des utilisateurs</h1>
+
+    <!-- Formulaire pour ajouter un utilisateur -->
+    <form id="userForm">
+        <input type="text" id="username" placeholder="Nom" required>
+        <input type="email" id="useremail" placeholder="Email" required>
+        <button type="submit">Ajouter Utilisateur</button>
+    </form>
+
+    <p id="offlineMessage"></p>
+
+    <h2>Liste des utilisateurs :</h2>
+    <ul id="userList"></ul>
+
+    <script src="app.js"></script>
+</body>
+</html>
