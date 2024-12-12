@@ -8,8 +8,15 @@ function getFirstLetter(str) {
     return str.charAt(0);
 }
 
+function doubleNumber(number) {
+    return number * 2;
+}
+
+function isEmptyString(str) {
+    return str == '';
+}
 
 // Méthode TDD
 // A partir des tests déjà écrits, veuillez coder les fonctions pour que les tests fonctionnent
 
-module.exports = { isOdd, getFirstLetter };
+module.exports = { isOdd, getFirstLetter, doubleNumber, isEmptyString };
