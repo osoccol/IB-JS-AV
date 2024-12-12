@@ -33,3 +33,25 @@ searchForm === null || searchForm === void 0 ? void 0 : searchForm.addEventListe
 });
 // Affichage initial des clients
 displayClients(clients);
+// CHAPITRE 5 : LocalStorage / APIs / PWA
+// Stocker une donnée
+localStorage.setItem('username', 'Alice');
+// Récupérer une donnée
+var username = localStorage.getItem('username');
+console.log(username);
+// // Supprimer une donnée
+setTimeout(function () {
+    localStorage.removeItem('username');
+}, 4000);
+// Exemple d'une requête Fetch
+var url = 'https://jsonplaceholder.typicode.com/users?_limit=5';
+fetch(url)
+    .then(function (response) { return response.json(); }) // Convertir la réponse en JSON
+    .then(function (data) { return console.log(data); })
+    .catch(function (error) { return console.error('Erreur:', error); });
+// Vérification si le navigateur supporte les Service Workers
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./service-worker.js')
+        .then(function (registration) { return console.log('Service Worker enregistré :', registration); })
+        .catch(function (error) { return console.error('Échec de l\'enregistrement :', error); });
+}
